@@ -283,13 +283,24 @@ Driven by a passion for innovation and problem-solving, I excel in delivering ef
             <a 
               href="https://raw.githubusercontent.com/enosiii/etan-portfolio/main/assets/Enos_Rigor_Tan-Resume.pdf"
               download="Enos_Rigor_Tan-Resume.pdf"
-              style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007bff; text-decoration: none; border-radius: 5px; transition: transform 0.3s, background-color 0.3s;"
-              onmouseover="this.style.transform='scale(1.1)'; this.style.backgroundColor='#0056b3';"
-              onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='#007bff';">
+              style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007bff; text-decoration: none; border-radius: 50px; animation: bounce 1.5s infinite ease-in-out; position: relative; transition: background-color 0.3s ease;"
+              onmouseover="this.style.animation='none'; this.style.backgroundColor='#0056b3';"
+              onmouseout="this.style.animation='bounce 1.5s infinite ease-in-out'; this.style.backgroundColor='#007bff';">
               <i class="bi bi-download navicon" style="margin-right: 8px;"></i>
               <strong>Download Resume</strong>
             </a>
           </h3>
+          
+          <style>
+            @keyframes bounce {
+              0%, 100% {
+                transform: scale(0.9);
+              }
+              50% {
+                transform: scale(1.05);
+              }
+            }
+          </style>
 
         </div>
       </div><!-- End Section Title -->
