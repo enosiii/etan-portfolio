@@ -160,11 +160,42 @@ h6 {
   border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
+/*
 .header .profile-img img {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border: 8px solid color-mix(in srgb, var(--default-color), transparent 80%);
+}*/
+
+.header .profile-img img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  padding: 8px; /* Simulates border thickness */
+  background: linear-gradient(45deg, rgb(0, 191, 255), rgb(235, 235, 235), rgb(0, 191, 255));
+  border-radius: 50%; /* Adjust for rounded borders */
+  -webkit-mask: radial-gradient(circle, white 90%, transparent 100%);
+  mask: radial-gradient(circle, white 90%, transparent 100%);
+  animation: gradient-animation 2s linear infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background: linear-gradient(45deg, rgb(0, 191, 255), rgb(235, 235, 235));
+  }
+  25% {
+    background: linear-gradient(45deg, rgb(235, 235, 235), rgb(0, 191, 255), rgb(235, 235, 235));
+  }
+  50% {
+    background: linear-gradient(45deg, rgb(0, 191, 255), rgb(235, 235, 235), rgb(0, 191, 255), rgb(235, 235, 235));
+  }
+  75% {
+    background: linear-gradient(45deg, rgb(0, 191, 255), rgb(235, 235, 235), rgb(0, 191, 255));
+  }
+  100% {
+    background: linear-gradient(45deg, rgb(235, 235, 235), rgb(0, 191, 255));
+  }
 }
 
 .header .logo {
